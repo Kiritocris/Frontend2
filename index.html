@@ -1,60 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing page</title>
     <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="stylesheet" href="./styles/hovstyles.css">
+    <link rel="stylesheet" href="./styles/loader.css">
+    <link rel="stylesheet" href="./styles/slider.css">
 </head>
-<body>
+
+<body class="hidden">
+    <div class="loader" id="loading">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <card id="part1"></card>
     <header>
+
         <div id="logo">
             <img src="./images/fullmoon.png" width="110px" height="80px" alt="fullmoon">
             <h2 id="textlogo">M O O N T R I P</h2>
         </div>
         <nav class="nav">
-            <a href="#">INICIO</a>
-            <a href="#">QUIENES SOMOS</a>
-            <a href="#">SERVICIOS</a>
-            <a href="#">FAQ</a>
+            <a href="#part1">INICIO</a>
+            <a href="#part2">QUIENES SOMOS</a>
+            <a href="#part3">SERVICIOS</a>
+            <a href="#part4">FAQ</a>
         </nav>
     </header>
-   
-        <main id="intro">
-            <img src="./images/fullmoon.png" alt="fullmoon">
-            <h1 class="textmain">Trip to <br>The m o o n </h1>
-            <p>!!⭐Un destino nunca antes conocido⭐<br>🌜Atrevete a descubrirlo🌛!!</p>
-            
-            </main>
-        <section class="container">    
+
+    <main class="intro">
+        <img src="./images/fullmoon.png" alt="fullmoon">
+        <h1 class="textmain">Trip to <br>The m o o n </h1>
+        <p>!!⭐Un destino nunca antes conocido⭐<br>🌜Atrevete a descubrirlo🌛!!<br><br>Viaja, No, Mejor vuela
+            proximamente con<br> M O O N T R I P</p>
+    </main>
+
+    <card id="part2"></card>
+    
+    <section class="container who">
 
         <h1>QUIENES SOMOS</h1>
     </section>
-
-    <section class="container">
+    
+    <card id="part3"></card>
+    <section class="container services">
         <h1>SERVICIOS</h1>
     </section>
-
-    <section class="container">
+    
+    <card id="part4"></card>
+    <section class="container faq">
         <h1>FAQ</h1>
     </section>
 
-<footer>
+    <section class="container" >
+        <div class="slide-contenedor">
+            <div class="miSlider fade">
+                <img src="./images/slide1.jpg" alt="">
+            </div>
+            <div class="miSlider fade">
+                <img src="./images/slide4.jpg" alt="">
+            </div>
+            <div class="miSlider fade">
+                <img src="./images/slide3.jpg" alt="">
+            </div>
+            <div class="direcciones">
+                <a style="cursor:pointer" class="atras" onclick="avanzaSlide(-1)">&#10094;</a>
+                <a style="cursor:pointer" class="adelante" onclick="avanzaSlide(1)">&#10095;</a>
+            </div>
+            <div class="barras">
+                <span class="barra active" onclick="posicionSlide(1)"></span>
+                <span class="barra" onclick="posicionSlide(2)"></span>
+                <span class="barra" onclick="posicionSlide(3)"></span>
+            </div>
+    
+        </div>
+    </section>
+    
 
-</footer>
-
-<script>
-
-    const intro = document.getElementById("part1")
-    intro.onmouseover=()=>{
-        
-    }
-//Funcion
-function cambiarElemento(){
-
-}
-</script>
+    <footer>
+        <p>By kiritocris</p>
+    </footer>
+    <script src="./utils/slider.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./utils/index.js"></script>
 </body>
+
 </html>
