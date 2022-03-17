@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cairo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;500&display=swap');  
+body{
+    display: flex;
+    height: 100vmax;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color:#0F0224; 
+    margin:0;
+}
+
+header{
+    z-index: 1;
+    display: grid;
+    position: sticky;
+    top: 0;
+    grid-template-columns: 1fr 5fr;
+    background: linear-gradient(#480CA8 0%,#3F37C9 35%);
+    width: 100%;
+    height: 80px;
+    justify-content: space-between;
+    margin:0;
+    font-size: 20px;
+    font-family:'Anton', sans-serif;;
+}
+
+section{
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #EBEBEB;
+}
+
+#logo{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#textlogo{
+    position: absolute;
+    color: #397bc7;
+    -webkit-text-stroke: black 1px;
+}
+
+#intro{
+    display: flex; 
+    justify-content: end;
+    width: 100%;
+    height: 105%;
+    background-image: url(/images/sky.jpg);
+    background-size:cover;
+    color: white;
+    border-bottom: solid 20px #3A0CA3;
+    justify-content: center;
+    justify-items: center;
+}
+
+#intro img{ 
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 500px;
+    height: 400px;
+}
+
+#intro p{
+    position: absolute;
+    left:500px;
+    top:150px;
+    font-size: 70px;
+    text-align: right;
+}
+
+
+.textmain{
+    position: absolute;
+    top:240px;
+    left: 190px;
+    color:black;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.nav{
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+}
+
+.container{
+    display: flex; 
+    margin:50px 50px 50px 50px;
+    width: 95%;
+    height: 20%;
+    border: solid 1px white;
+    justify-content: center;
+    justify-items: center;
+}
